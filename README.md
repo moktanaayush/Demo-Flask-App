@@ -8,13 +8,12 @@
 
 ### To be Installed
 
--Docker
--Docker Compose
+Docker , Docker Compose
 
 # Build and Run it locally
 
-git clone <repo-url>
-cd <repo-folder>
+git clone https://github.com/moktanaayush/Demo-Flask-App.git
+cd Demo-Flask-App
 
 # Building and starting docker compose
 
