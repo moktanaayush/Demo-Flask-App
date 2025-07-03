@@ -4,9 +4,9 @@
 
 =======
 
-# Demo Flask App with NGINX Reverse Proxy
+## Demo Flask App with NGINX Reverse Proxy
 
-# To be Installed
+### To be Installed
 
 -Docker
 -Docker Compose
