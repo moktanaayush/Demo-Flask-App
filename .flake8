@@ -14,9 +14,12 @@ max-line-length = 127
 max-complexity = 10
 
 # Ignore some common issues that aren't critical
+# E203: whitespace before ':'
+# W503: line break before binary operator
 ignore = 
-    E203,  # whitespace before ':'
-    W503,  # line break before binary operator
+    E203,
+    W503
 
+# F401: imported but unused in __init__.py files
 per-file-ignores =
-    __init__.py:F401  # imported but unused in __init__.py files
+    __init__.py:F401
