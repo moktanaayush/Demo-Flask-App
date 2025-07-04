@@ -107,4 +107,4 @@ jobs:
         echo "Application URL: http://localhost (via Nginx)"
         echo "Direct Flask URL: http://localhost:8000 (internal)"
         echo "Container status:"
-        docker-compose ps
+        docker compose ps
