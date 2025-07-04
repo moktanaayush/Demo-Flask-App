@@ -10,7 +10,7 @@ next_id = 3
 
 @app.route("/", methods=['GET'])  # Fixed E251: removed spaces around =
 def home():
-    return "Hey! Welcome to Chatbot Deployment! Happy Learning!Lets go"
+    return "Hey! Welcome to Chatbot Deployment! Happy Learning!"
 
 
 @app.route('/items', methods=['GET'])  # Fixed E302: added 2 blank lines
@@ -60,5 +60,7 @@ def delete_item(item_id):
     return jsonify({"result": True})
 
 
-if __name__ == '__main__':  # Fixed the ** to __
-    app.run(debug=True)
+if __name__ == '__main__':
+    import os
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port, debug=False)
