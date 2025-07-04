@@ -1,19 +1,19 @@
 from flask import Flask, jsonify, request, abort
 
 app = Flask(__name__)
-
 items = [
     {"id": 1, "name": "Item One", "description": "First item"},
     {"id": 2, "name": "Item Two", "description": "Second item"}
 ]
-
 next_id = 3
 
-@app.route("/", methods= ['GET'])
+
+@app.route("/", methods=['GET'])  # Fixed E251: removed spaces around =
 def home():
     return "Hey! Welcome to Chatbot Deployment! Happy Learning!"
 
-@app.route('/items', methods=['GET'])
+
+@app.route('/items', methods=['GET'])  # Fixed E302: added 2 blank lines
 def get_items():
     return jsonify(items)
 
@@ -30,7 +30,7 @@ def get_item(item_id):
 def create_item():
     global next_id
     data = request.get_json()
-    if not data or not 'name' in data:
+    if not data or 'name' not in data:  # Fixed E713: changed 'not ... in' to 'not in'
         abort(400)
     new_item = {
         "id": next_id,
@@ -60,5 +60,5 @@ def delete_item(item_id):
     return jsonify({"result": True})
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # Fixed the ** to __
     app.run(debug=True)
