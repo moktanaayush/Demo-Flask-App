@@ -10,7 +10,7 @@ next_id = 3
 
 @app.route("/", methods=['GET'])  # Fixed E251: removed spaces around =
 def home():
-    return "Hey! Welcome to Chatbot Deployment! Happy Learning! Go!"
+    return "Hey! Welcome to Chatbot Deployment! Happy Learning!"
 
 
 @app.route('/items', methods=['GET'])  # Fixed E302: added 2 blank lines
