@@ -79,13 +79,13 @@ jobs:
       run: |
         docker load < flask-app.tar.gz
         
-    - name: Deploy with docker-compose
+    - name: Deploy with docker compose
       run: |
         # Stop existing services
-        docker-compose down || true
+        docker compose down || true
         
         # Start services with the new image
-        docker-compose up -d
+        docker compose up -d
         
     - name: Wait for application to start
       run: |
