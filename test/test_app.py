@@ -1,2 +1,2 @@
 def test_homepage():
-    assert True  
+    assert True
