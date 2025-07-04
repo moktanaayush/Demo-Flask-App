@@ -1,0 +1,22 @@
+[flake8]
+exclude = 
+    .venv,
+    venv,
+    env,
+    __pycache__,
+    .git,
+    .pytest_cache,
+    *.egg-info,
+    build,
+    dist
+
+max-line-length = 127
+max-complexity = 10
+
+# Ignore some common issues that aren't critical
+ignore = 
+    E203,  # whitespace before ':'
+    W503,  # line break before binary operator
+
+per-file-ignores =
+    __init__.py:F401  # imported but unused in __init__.py files
