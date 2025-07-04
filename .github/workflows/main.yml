@@ -95,7 +95,7 @@ jobs:
     - name: Health check
       run: |
         # Check if containers are running
-        docker-compose ps
+        docker compose ps
         
         # Test through Nginx (port 80)
         curl -f http://localhost/ || exit 1
